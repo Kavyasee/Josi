@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joesal's Page</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f6fc;
+    color: #263248;
+}
+
+header {
+    background: #244b9b;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 34px;
+}
+
+nav {
+    background: white;
+    text-align: center;
+    padding: 18px 10px;
+    line-height: 2.5;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: #244b9b;
+    text-decoration: underline;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e68a18;
+}
+
+section {
+    max-width: 1050px;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000010;
+    scroll-margin-top: 90px;
+}
+
+h2 {
+    text-align: center;
+    color: #244b9b;
+    margin-bottom: 25px;
+}
+
+.home-btn {
+    display: inline-block;
+    margin-top: 20px;
+    color: #244b9b;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* STUDENT TABLE */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #d5deed;
+    padding: 12px 8px;
+    text-align: center;
+}
+
+th {
+    background: #244b9b;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #edf3ff;
+}
+
+.topper {
+    background: #fff0bd;
+    font-weight: bold;
+}
+
+/* HOBBIES */
+.cards, .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    text-align: center;
+    padding: 15px;
+    background: #f0f4fc;
+    border-radius: 10px;
+}
+
+.card img, .gallery img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery div {
+    text-align: center;
+    background: #f0f4fc;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* CRICKET PLAYERS */
+.player {
+    padding: 15px;
+    margin: 15px 0;
+    background: #f0f4fc;
+    border-left: 5px solid #244b9b;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+.player h3 {
+    color: #244b9b;
+}
+
+/* REGISTRATION FORM */
+form {
+    max-width: 750px;
+    margin: auto;
+    padding: 20px;
+    background: #f3f6fc;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #244b9b;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+select, textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #bbc8dc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 8px 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background: #244b9b;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e68a18;
+}
+
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* MOBILE DESIGN */
+@media(max-width: 600px) {
+    header h1 {
+        font-size: 27px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    section {
+        margin: 15px 10px;
+        padding: 17px;
+    }
+
+    form {
+        padding: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HOME PAGE -->
+<header id="home">
+    <h1>Joesal's Page</h1>
+</header>
+
+<!-- NAVIGATION LINKS -->
+<nav>
+    <a href="#students">Student Table</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#space">Space Gallery</a>
+    <a href="#cricket">Cricket Players</a>
+    <a href="#register">Registration Form</a>
+</nav>
+
+<!-- PAGE 1: STUDENT TABLE -->
+<section id="students">
+    <h2>Student Mark List</h2>
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Physics</th>
+                <th>Chemistry</th>
+                <th>Social</th>
+                <th>Computer Science</th>
+                <th>Tamil</th>
+                <th>English</th>
+            </tr>
+
+            <tr>
+                <td>101</td><td>Arjun</td><td>85</td><td>80</td><td>82</td><td>88</td><td>84</td><td>86</td>
+            </tr>
+            <tr>
+                <td>102</td><td>Dhivya</td><td>90</td><td>92</td><td>88</td><td>95</td><td>91</td><td>93</td>
+            </tr>
+            <tr>
+                <td>103</td><td>Kavin</td><td>80</td><td>85</td><td>79</td><td>90</td><td>86</td><td>84</td>
+            </tr>
+            <tr>
+                <td>104</td><td>Harini</td><td>88</td><td>91</td><td>90</td><td>93</td><td>95</td><td>92</td>
+            </tr>
+            <tr class="topper">
+                <td>105</td><td>Joesal</td><td>96</td><td>97</td><td>95</td><td>100</td><td>98</td><td>97</td>
+            </tr>
+        </table>
+    </div>
+
+    <p><b>Computer Science Topper: Joesal – 100 Marks</b></p>
+    <a href="#home" class="home-btn">Back to Homepage</a>
+</section>
+
+<!-- PAGE 2: HOBBIES -->
+<section id="hobbies">
+    <h2>My Hobbies</h2>
+
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600" alt="Football">
+            <h3>Football</h3>
+            <p>Football improves teamwork and fitness.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=600" alt="Volleyball">
+            <h3>Volleyball</h3>
+            <p>Volleyball develops coordination and strength.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=600" alt="Cricket">
+            <h3>Cricket</h3>
+            <p>Cricket is an exciting team sport.</p>
+        </div>
+    </div>
+
+    <a href="#home" class="home-btn">Back to Homepage</a>
+</section>
+
+<!-- PAGE 3: SPACE GALLERY -->
+<section id="space">
+    <h2>Space Gallery</h2>
+
+    <div class="gallery">
+        <div>
+            <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=600" alt="Galaxy">
+            <h3>Galaxy</h3>
+        </div>
+
+        <div>
+            <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600" alt="Earth">
+            <h3>Earth</h3>
+        </div>
+
+        <div>
+            <img src="https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=600" alt="Planet">
+            <h3>Planets</h3>
+        </div>
+
+        <div>
+            <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?w=600" alt="Stars">
+            <h3>Stars</h3>
+        </div>
+    </div>
+
+    <a href="#home" class="home-btn">Back to Homepage</a>
+</section>
+
+<!-- PAGE 4: CRICKET PLAYERS -->
+<section id="cricket">
+    <h2>Famous Cricket Players</h2>
+
+    <div class="player">
+        <h3>1. Shubman Gill</h3>
+        <p>Shubman Gill is an Indian cricketer known for his elegant batting style and consistency.</p>
+    </div>
+
+    <div class="player">
+        <h3>2. Virat Kohli</h3>
+        <p>Virat Kohli is famous for his aggressive batting, fitness and determination.</p>
+    </div>
+
+    <div class="player">
+        <h3>3. Suryakumar Yadav</h3>
+        <p>Suryakumar Yadav is known for his innovative batting and 360-degree shots.</p>
+    </div>
+
+    <div class="player">
+        <h3>4. Ravindra Jadeja</h3>
+        <p>Ravindra Jadeja is an excellent all-rounder known for batting, bowling and fielding.</p>
+    </div>
+
+    <div class="player">
+        <h3>5. MS Dhoni</h3>
+        <p>MS Dhoni is a legendary former Indian captain admired for his calm leadership.</p>
+    </div>
+
+    <a href="#home" class="home-btn">Back to Homepage</a>
+</section>
+
+<!-- PAGE 5: REGISTRATION FORM -->
+<section id="register">
+    <h2>Student Registration Form</h2>
+
+    <form action="#" method="get">
+
+        <div class="form-group">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+        </div>
+
+        <div class="form-group">
+            <label for="father">Father's Name:</label>
+            <input type="text" id="father" name="father">
+        </div>
+
+        <div class="form-group">
+            <label for="mother">Mother's Name:</label>
+            <input type="text" id="mother" name="mother">
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="form-group">
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male" required> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <input type="radio" name="gender" value="Other"> Other
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Mobile Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10 digit number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+        </div>
+
+        <div class="form-group">
+            <label for="state">State:</label>
+            <select id="state" name="state" required>
+                <option value="">Select State</option>
+                <option>Tamil Nadu</option>
+                <option>Kerala</option>
+                <option>Karnataka</option>
+                <option>Andhra Pradesh</option>
+                <option>Telangana</option>
+                <option>Maharashtra</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="class">Class:</label>
+            <select id="class" name="class" required>
+                <option value="">Select Class</option>
+                <option>6th Standard</option>
+                <option>7th Standard</option>
+                <option>8th Standard</option>
+                <option>9th Standard</option>
+                <option>10th Standard</option>
+                <option>11th Standard</option>
+                <option>12th Standard</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="subject">Favourite Subject:</label>
+            <select id="subject" name="subject">
+                <option>Computer Science</option>
+                <option>Physics</option>
+                <option>Chemistry</option>
+                <option>Mathematics</option>
+                <option>Tamil</option>
+                <option>English</option>
+                <option>Social Science</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Hobbies:</label>
+            <input type="checkbox" name="hobby" value="Football"> Football
+            <input type="checkbox" name="hobby" value="Cricket"> Cricket
+            <input type="checkbox" name="hobby" value="Volleyball"> Volleyball
+            <input type="checkbox" name="hobby" value="Reading"> Reading
+            <input type="checkbox" name="hobby" value="Drawing"> Drawing
+        </div>
+
+        <div class="form-group">
+            <label for="reason">Why do you want to join our school?</label>
+            <textarea id="reason" name="reason" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="photo">Upload Your Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree" style="display:inline">
+                I agree to the terms and conditions.
+            </label>
+        </div>
+
+        <div style="text-align:center">
+            <button type="submit">Submit</button>
+            <button type="reset">Clear</button>
+        </div>
+
+    </form>
+
+    <a href="#home" class="home-btn">Back to Homepage</a>
+</section>
+
+<footer>
+    <h3>Joesal's Page</h3>
+    <p>Learn Today, Lead Tomorrow!</p>
+    <a href="#home">Back to Top</a>
+</footer>
+
+</body>
+</html>
